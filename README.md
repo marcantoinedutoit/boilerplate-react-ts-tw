@@ -10,11 +10,6 @@
 🚀 Boilerplate and Starter for React Typescript with App Router and Page Router support, Tailwind CSS and TypeScript.   
 Made with developer experience first: React, TypeScript, Vite, ESLint, Prettier, Jest, Tailwind CSS.
 
-
-<div style="text-align: center;">
-    <img src="https://i.ibb.co/GPPrVgn/boilerplate-react-ts-redux-tw.png"  alt='Application screenshot'/>
-</div>
-
 Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
