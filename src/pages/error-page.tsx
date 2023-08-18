@@ -1,29 +1,13 @@
 import React, { ReactElement } from 'react';
-import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 
-const ErrorPage: React.FC = (): ReactElement => {
-  const error = useRouteError();
-  let errorMessage: string;
-
-  if (isRouteErrorResponse(error)) {
-    errorMessage = error.error?.message || error.statusText;
-  } else if (error instanceof Error) {
-    errorMessage = error.message;
-  } else if (typeof error === 'string') {
-    errorMessage = error;
-  } else {
-    errorMessage = 'Unknown error';
-  }
-
+export const NotFound: React.FunctionComponent = (): ReactElement => {
   return (
-    <div id='error-page' className='flex flex-col gap-8 justify-center items-center h-screen'>
-      <h1 className='text-4xl font-bold'>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p className='text-slate-400'>
-        <i>{errorMessage}</i>
-      </p>
+    <div className='m-auto max-w-5xl mt-20 text-center'>
+      <h1 className='text-4xl tracking-tight font-extrabold text-white sm:text-3xl md:text-4xl animate__animated animate__backInLeft mt-72 mb-10'>
+        Page not found
+        <br />
+        <span className='text-gradient-title'>The requested page could not be found.</span>
+      </h1>
     </div>
   );
 };
-
-export default ErrorPage;
